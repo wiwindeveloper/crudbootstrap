@@ -1,6 +1,11 @@
 <?php
     include 'db/connect_db.php';
     include_once 'header.php';
+
+    //number format
+    $jumlah_desimal   = "2";
+    $pemisah_desimal  = ",";
+    $pemisah_ribuan   = ".";
 ?>
   <body>
     <?php include_once 'navbar.php';?>
@@ -11,6 +16,7 @@
         <div class="row">
             <div class="col-md-12">
                 <a type="button" class="btn btn-primary" href="addProduct.php">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                     Add
                 </a>
             </div>
@@ -43,12 +49,14 @@
                                 <td><?php echo $row['name'];?></td>
                                 <td><?php echo $row['category'];?></td>
                                 <td><?php echo $row['stock'];?></td>
-                                <td><?php echo "Rp ".$row['price'];?></td>
+                                <td><?php echo "Rp ".(number_format($row['price'],$jumlah_desimal, $pemisah_desimal, $pemisah_ribuan));?></td>
                                 <td>
                                     <a href ="editProduct.php?edit_id=<?php echo $row['id_product'];?>" type="button" class="btn btn-sm btn-info">
-                                        Edit
+                                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                                         Edit
                                     </a>
                                     <a href="deleteProduct.php?delete_id=<?php echo $row['id_product'];?>" type="button" class="btn btn-sm btn-danger">
+                                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
                                         Delete
                                     </a>
                                 </td>
@@ -64,11 +72,7 @@
     </div>
 
     <!-- Footer-->
-    <footer class="footer">
-      <div class="container">
-        <p class="text-muted">&copy; Wiwin Savitri</p>
-      </div>
-    </footer>
+    <?php include_once 'footer.php';?>
     <!-- /.Footer-->
   </body>
 </html>

@@ -48,7 +48,10 @@ include_once 'header.php';
                 }
               ?>
               <div class="col-md-6">
-                <a href="index.php" class="btn btn-primary">Back</a>
+                <a href="index.php" class="btn btn-primary">
+                  <span class="glyphicon glyphicon-backward" aria-hidden="true"></span>
+                  Back
+                </a>
               </div>
             </div>
         </div>
