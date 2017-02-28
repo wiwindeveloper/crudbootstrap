@@ -6,13 +6,19 @@
 	$pStock = $_POST['productStock'];
 	$pPrice = $_POST['productPrice'];
 
+	//number format
+    $jumlah_desimal   = "2";
+    $pemisah_desimal  = ",";
+    $pemisah_ribuan   = ".";
+
 	$query = "
 			INSERT INTO 
 				products (
 					name, 
 					category, 
 					stock, 
-					price) 
+					price
+					) 
 			VALUES (
 					'$pName',
 					'$pCategory',
@@ -22,7 +28,7 @@
 	
 	$addData = mysqli_query($connect,$query);
 
-  include_once 'header.php';
+  	include_once 'header.php';
 ?>
   <body>
     <?php include_once 'navbar.php';?>
@@ -68,7 +74,7 @@
 		                <td><?php echo $pName; ?></td>
 		                <td><?php echo $pCategory; ?></td>
 		                <td><?php echo $pStock; ?></td>
-		                <td><?php echo $pPrice; ?></td>
+		                <td><?php echo "Rp".(number_format($pPrice,$jumlah_desimal, $pemisah_desimal, $pemisah_ribuan)); ?></td>
 		              </tr>
 		            </tbody>
           		</table> 

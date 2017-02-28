@@ -70,6 +70,7 @@
                     </tbody>
                 </table>
                 <a type="button" class="btn btn-primary" href="index.php">
+                    <span class="glyphicon glyphicon-backward"></span>
                     Back Home
                 </a>
             </div>

@@ -18,7 +18,7 @@ include_once 'header.php';
                       <label for="productName">
                         Product Name
                       </label>
-                      <input type="text" class="form-control" name="productName" placeholder="Type product name here....">
+                      <input type="text" class="form-control" name="productName" placeholder="Type product name here...." required>
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -26,7 +26,7 @@ include_once 'header.php';
                       <label for="productCategory">
                         Category
                       </label>
-                      <select class="form-control" name="productCategory">
+                      <select class="form-control" name="productCategory" required>
                         <option value="">
                           -Select a category-
                         </option>
@@ -56,7 +56,7 @@ include_once 'header.php';
                       <label for="productStock">
                         Stock
                       </label>
-                      <input type="number" class="form-control" name="productStock">
+                      <input type="number" class="form-control" name="productStock" required>
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -68,7 +68,7 @@ include_once 'header.php';
                         <div class="input-group-addon">
                           Rp
                         </div>
-                          <input type="number" class="form-control" name="productPrice">
+                          <input type="number" class="form-control" name="productPrice" required>
                         <div class="input-group-addon">
                           .00
                         </div>
