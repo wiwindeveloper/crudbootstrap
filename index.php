@@ -55,7 +55,7 @@
                                         <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                                          Edit
                                     </a>
-                                    <a href="deleteProduct.php?delete_id=<?php echo $row['id_product'];?>" type="button" class="btn btn-sm btn-danger">
+                                    <a href="deleteProduct.php?delete_id=<?php echo $row['id_product'];?>" type="button" class="btn btn-sm btn-danger" onClick="return confirm('Sure to delete this data?')">
                                         <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
                                         Delete
                                     </a>
